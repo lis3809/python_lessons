@@ -59,10 +59,11 @@ def key_pressed(event):
     elif event.keysym == 'Left':
         move_wrap(player, -step, 0)
 
-#Добавляем кнопку рестарт
+
+# Добавляем кнопку рестарт
 restart = tk.Button(master, text="Haчaть заново", command=prepare_and_start)
 
-#Упаковываем созданные объекты
+# Упаковываем созданные объекты
 restart.pack()
 label.pack()
 canvas.pack()
