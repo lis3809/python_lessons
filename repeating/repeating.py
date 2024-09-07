@@ -7,13 +7,7 @@
      Введите два числа -> 1 10
      2 4 6 8 10
 """
-# a, b = map(int, input("Введите два числа через пробел: ").split())
-#
-# print("Программа вывода четных чисел")
-#
-# for i in range(a, b + 1):
-#     if i % 2 == 0:
-#         print(i, end=" ")
+
 
 """
 Дано целое число в диапазоне 1 - 9999. 
@@ -23,21 +17,3 @@
      Введите число -> 322
      четное трехзначное число
 """
-
-# number = int(input("Введите число -> "))
-#
-# if number % 2 == 0:
-#     even_or_odd = "четное"
-# else:
-#     even_or_odd = "нечетное"
-#
-# if len(str(number)) == 1:
-#     num_type = "однозначное число"
-# elif len(str(number)) == 2:
-#     num_type = "двузначное число"
-# elif len(str(number)) == 3:
-#     num_type = "трехзначное число"
-# else:
-#     num_type = "четырехзначное число"
-#
-# print(f"{even_or_odd} {num_type}")
