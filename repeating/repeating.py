@@ -7,7 +7,13 @@
      Введите два числа -> 1 10
      2 4 6 8 10
 """
+print("Программа вывода четных чисел")
+a, b = map(int, input("Введите два числа -> \n").split())
 
+for i in range(a, b + 1):
+    if i % 2 == 0:
+        print(i, end=" ")
+        print()
 
 """
 Дано целое число в диапазоне 1 - 9999. 
@@ -17,3 +23,20 @@
      Введите число -> 322
      четное трехзначное число
 """
+number = int(input("Введите число -> \n"))
+
+if number % 2 == 0:
+    even_odd = "четное"
+else:
+    even_odd = "нечетное"
+
+if 1 <= number <= 9:
+    digits = "однозначное"
+elif 10 <= number <= 99:
+    digits = "двузначное"
+elif 100 <= number <= 999:
+    digits = "трехзначное"
+else:
+    digits = "четырехзначное"
+
+print(f"{even_odd} {digits} число")
