@@ -12,6 +12,9 @@ width = 500
 FPS = 30
 clock = pg.time.Clock()
 
+# TIMEREVENT = pg.USEREVENT + 1
+# pg.time.set_timer(TIMEREVENT, 3000)
+
 centr_x = width // 2
 centr_y = high // 2
 rad = 50
@@ -27,6 +30,10 @@ while True:
         if event.type == pg.QUIT:
             pg.quit()
             exit()
+
+        # #Обрабатываем событие по таймеру
+        # if event.type == TIMEREVENT:
+        #     list_circles.append(MySuperCircle(random.randrange(width), random.randrange(high), 30, random.choices(range(256), k=3)))
 
     window.fill('white')
 

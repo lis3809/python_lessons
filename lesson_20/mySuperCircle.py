@@ -17,7 +17,7 @@ class MySuperCircle:
     def move_by_keys(self):
         keys = pg.key.get_pressed()
         if keys[pg.K_UP]:
-            self.y -= 10
+            self.y -= 1
         if keys[pg.K_DOWN]:
             self.y += 1
         if keys[pg.K_LEFT]:

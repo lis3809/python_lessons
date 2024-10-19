@@ -32,4 +32,4 @@ while True:
     pygame.display.update()
 
     pygame.time.delay(10)
-    #clock.tick(FPS)
+    # clock.tick(FPS)
