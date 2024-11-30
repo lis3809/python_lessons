@@ -85,10 +85,10 @@ class Board:
                 return 'col', i
             if check_i_line(board, i):
                 return 'line', i
-        if check_main_daig(board):
-            return 'daig', 1
-        if check_secondary_daig(board):
-            return 'daig', 2
+            if check_main_daig(board):
+                return 'diag', 1
+            if check_secondary_daig(board):
+                return 'diag', 2
         return None
 
     def check_end(self, screen):
@@ -106,8 +106,14 @@ class Board:
             elif type_end == 'diag':
                 if number == 1:
                     x0, y0 = shift, shift
+                    x1 = self.size * 3 - shift
+                    y1 = self.size * 3 - shift
                 else:
-                    x1, y1 = self.size * 3 - shift, self.size * 3 - shift
+                    x0 = self.size * 3 - shift
+                    y0 = shift
+                    x1 = shift
+                    y1 = self.size * 3 - shift
+
             pg.draw.line(screen, RED, (x0, y0), (x1, y1), 10)
             pg.display.update()
             pg.time.delay(3000)

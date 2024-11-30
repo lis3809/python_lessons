@@ -38,13 +38,17 @@ while True:
     keys = pg.key.get_pressed()
     if keys[pg.K_SPACE]:
         board.clean_2()
-    # if keys[pg.K_ESCAPE] or board.check_end:
-    #     pg.quit()
-    #     exit()
+
+    if keys[pg.K_ESCAPE]:
+        pg.quit()
+        exit()
 
     # Закрашиваем фон
     window.fill(WHITE)
     board.render(window)
+
+    #Проверяем состояние игры
+    board.check_end(window)
 
     """ Конец игровой логики  """
     # Обновляем экран
