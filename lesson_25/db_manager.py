@@ -5,6 +5,7 @@ class DataBase:
     def __init__(self, file):
         self.connection = sqlite3.connect(file)
         self.cursor = self.connection.cursor()
+        self.create_table() #TODO
 
     def create_table(self, table_name='scores'):
         query_create = '''
